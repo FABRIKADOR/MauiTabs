@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="Act4.Views.MainTabs.AntagonistsPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Antagonistas"
+             BackgroundColor="#F8F9FA">
+
+    <Grid>
+        <CollectionView x:Name="CharactersCollectionView" 
+                        Margin="15"
+                        ItemsLayout="VerticalGrid, 2"
+                        ItemSizingStrategy="MeasureAllItems">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="8">
+                        <Frame BackgroundColor="White" 
+                               HasShadow="True" 
+                               CornerRadius="20"
+                               Padding="0"
+                               BorderColor="Transparent"
+                               x:Name="CardFrame">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnCharacterTapped" />
+                            </Frame.GestureRecognizers>
+
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <VisualState.Setters>
+                                            <Setter Property="Scale" Value="1" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed">
+                                        <VisualState.Setters>
+                                            <Setter Property="Scale" Value="0.95" />
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="180" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+
+                                <Grid Grid.Row="0">
+                                    <Frame CornerRadius="20,20,0,0" 
+                                           Padding="0" 
+                                           HasShadow="False"
+                                           BorderColor="Transparent"
+                                           BackgroundColor="LightGray">
+                                        <Image Source="{Binding ImageSource}"
+                                               Aspect="AspectFill"
+                                               HeightRequest="180" />
+                                    </Frame>
+
+                                    <Frame CornerRadius="20,20,0,0" 
+                                           Padding="0" 
+                                           HasShadow="False"
+                                           BorderColor="Transparent">
+                                        <Frame.Background>
+                                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                                <GradientStop Color="Transparent" Offset="0.0" />
+                                                <GradientStop Color="#40000000" Offset="1.0" />
+                                            </LinearGradientBrush>
+                                        </Frame.Background>
+                                    </Frame>
+
+                                    <Frame BackgroundColor="#E74C3C" 
+                                           CornerRadius="12"
+                                           Padding="8,4"
+                                           HasShadow="False"
+                                           BorderColor="Transparent"
+                                           HorizontalOptions="End"
+                                           VerticalOptions="Start"
+                                           Margin="10">
+                                        <Label Text="ANTAGONISTA" 
+                                               TextColor="White" 
+                                               FontSize="10"
+                                               FontAttributes="Bold" />
+                                    </Frame>
+                                </Grid>
+
+                                <StackLayout Grid.Row="1" 
+                                           Padding="15,12,15,15" 
+                                           Spacing="8">
+
+                                    <Label Text="{Binding Name}"
+                                           FontSize="16"
+                                           FontAttributes="Bold"
+                                           TextColor="#2C3E50"
+                                           LineBreakMode="TailTruncation" />
+
+                                    <Label Text="{Binding Description}"
+                                           FontSize="12"
+                                           TextColor="#7F8C8D"
+                                           LineBreakMode="TailTruncation"
+                                           MaxLines="3"
+                                           LineHeight="1.2" />
+
+                                    <Frame BackgroundColor="#E74C3C" 
+                                           CornerRadius="15"
+                                           Padding="0"
+                                           HasShadow="False"
+                                           BorderColor="Transparent"
+                                           HeightRequest="30"
+                                           Margin="0,5,0,0">
+                                        <Label Text="Ver detalles →" 
+                                               TextColor="White" 
+                                               FontSize="11"
+                                               FontAttributes="Bold"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center" />
+                                    </Frame>
+                                </StackLayout>
+                            </Grid>
+                        </Frame>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+
+</ContentPage>

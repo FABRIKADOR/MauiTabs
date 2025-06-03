@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="Act4.Views.Characters.CharacterDetailPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="{Binding Character.Name}"
+             BackgroundColor="#F8F9FA">
+
+    <ScrollView>
+        <StackLayout Spacing="0">
+
+            <!-- Header con imagen de fondo -->
+            <Grid HeightRequest="350">
+                <Frame Padding="0" 
+                       CornerRadius="0,0,30,30"
+                       HasShadow="True"
+                       BorderColor="Transparent">
+                    <Image Source="{Binding Character.ImageSource}"
+                           Aspect="AspectFill" />
+                </Frame>
+
+                <!-- Overlay gradient -->
+                <Frame Padding="0" 
+                       CornerRadius="0,0,30,30"
+                       HasShadow="False"
+                       BorderColor="Transparent">
+                    <Frame.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                            <GradientStop Color="Transparent" Offset="0.0" />
+                            <GradientStop Color="#80000000" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Frame.Background>
+                </Frame>
+
+                <!-- Título sobre la imagen -->
+                <StackLayout VerticalOptions="End" 
+                           Padding="30,0,30,30">
+                    <Label Text="{Binding Character.Name}"
+                           FontSize="32"
+                           FontAttributes="Bold"
+                           TextColor="White"
+                           HorizontalOptions="Start" />
+
+                    <Frame BackgroundColor="#3498DB" 
+                           CornerRadius="15"
+                           Padding="12,6"
+                           HasShadow="False"
+                           BorderColor="Transparent"
+                           HorizontalOptions="Start">
+                        <Label Text="{Binding Character.Category}" 
+                               TextColor="White" 
+                               FontSize="12"
+                               FontAttributes="Bold" />
+                    </Frame>
+                </StackLayout>
+            </Grid>
+
+            <!-- Contenido principal -->
+            <StackLayout Padding="30,20" Spacing="20">
+
+                <!-- Card de descripción -->
+                <Frame BackgroundColor="White" 
+                       HasShadow="True" 
+                       CornerRadius="20"
+                       Padding="25"
+                       BorderColor="Transparent">
+
+                    <StackLayout Spacing="15">
+                        <Label Text="Descripción"
+                               FontSize="20"
+                               FontAttributes="Bold"
+                               TextColor="#2C3E50" />
+
+                        <BoxView HeightRequest="2" 
+                                 BackgroundColor="#3498DB" 
+                                 HorizontalOptions="Start"
+                                 WidthRequest="50" />
+
+                        <Label Text="{Binding Character.Description}"
+                               FontSize="16"
+                               LineBreakMode="WordWrap"
+                               TextColor="#34495E"
+                               LineHeight="1.4" />
+                    </StackLayout>
+                </Frame>
+
+                <!-- Botones de acción -->
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="15">
+
+                    <Frame Grid.Column="0"
+                           BackgroundColor="#2ECC71" 
+                           CornerRadius="15"
+                           Padding="0"
+                           HasShadow="True"
+                           BorderColor="Transparent"
+                           HeightRequest="50">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnFavoriteClicked" />
+                        </Frame.GestureRecognizers>
+                        <Label Text="❤️ Favorito" 
+                               TextColor="White" 
+                               FontSize="14"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center" />
+                    </Frame>
+
+                    <Frame Grid.Column="1"
+                           BackgroundColor="#E67E22" 
+                           CornerRadius="15"
+                           Padding="0"
+                           HasShadow="True"
+                           BorderColor="Transparent"
+                           HeightRequest="50">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnShareClicked" />
+                        </Frame.GestureRecognizers>
+                        <Label Text="📤 Compartir" 
+                               TextColor="White" 
+                               FontSize="14"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center" />
+                    </Frame>
+                </Grid>
+
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

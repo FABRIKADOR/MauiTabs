@@ -1,0 +1,73 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0-ios
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Act4
+build_property.ProjectDir = D:\Repos visual morado\Act4\Act4\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[D:/Repos visual morado/Act4/Act4/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Act4.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[D:/Repos visual morado/Act4/Act4/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Act4.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[D:/Repos visual morado/Act4/Act4/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Act4.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[D:/Repos visual morado/Act4/Act4/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Act4.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[D:/Repos visual morado/Act4/Act4/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Act4.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[D:/Repos visual morado/Act4/Act4/Views/Characters/CharacterDetailPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Act4.Views.Characters.CharacterDetailPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Characters\CharacterDetailPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Characters\CharacterDetailPage.xaml
+
+[D:/Repos visual morado/Act4/Act4/Views/MainTabs/AntagonistsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Act4.Views.MainTabs.AntagonistsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MainTabs\AntagonistsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MainTabs\AntagonistsPage.xaml
+
+[D:/Repos visual morado/Act4/Act4/Views/MainTabs/MainCharactersPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Act4.Views.MainTabs.MainCharactersPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MainTabs\MainCharactersPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MainTabs\MainCharactersPage.xaml
+
+[D:/Repos visual morado/Act4/Act4/Views/MainTabs/SupportingCharactersPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Act4.Views.MainTabs.SupportingCharactersPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MainTabs\SupportingCharactersPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MainTabs\SupportingCharactersPage.xaml
